@@ -9,4 +9,12 @@ public class EasyBot implements BotDifficulty {
   private BotStrategies strategy = new RandomStrategy();
 
   public EasyBot() {}
+
+  public String getBotName() {
+    return botName;
+  }
+
+  public BotStrategies getStrategy() {
+    return strategy;
+  }
 }
