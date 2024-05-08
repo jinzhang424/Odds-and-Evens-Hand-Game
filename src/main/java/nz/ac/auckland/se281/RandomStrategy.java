@@ -1,6 +1,6 @@
 package nz.ac.auckland.se281;
 
-public abstract class RandomStrategy implements BotStrategies {
+public class RandomStrategy implements BotStrategies {
 
   public RandomStrategy() {}
 
