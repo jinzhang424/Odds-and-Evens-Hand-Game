@@ -7,15 +7,22 @@ import nz.ac.auckland.se281.Main.Difficulty;
 public class Game {
 
   private int roundCounter = 1;
+  private String playerName = null;
 
   public void newGame(Difficulty difficulty, Choice choice, String[] options) {
     MessageCli.WELCOME_PLAYER.printMessage(options[0]);
     roundCounter = 1;
+    playerName = options[0];
   }
 
   public void play() {
     MessageCli.START_ROUND.printMessage(String.valueOf(roundCounter));
-    
+
+    MessageCli.ASK_INPUT.printMessage();
+    String input = Utils.scanner.nextLine();
+
+    MessageCli.PRINT_INFO_HAND.printMessage(playerName, input);
+
     roundCounter++;
   }
 
