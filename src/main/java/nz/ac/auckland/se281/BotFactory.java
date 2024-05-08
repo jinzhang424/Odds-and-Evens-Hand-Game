@@ -2,7 +2,7 @@ package nz.ac.auckland.se281;
 
 import nz.ac.auckland.se281.Main.Difficulty;
 
-public class BotFactory implements BotDifficulty {
+public class BotFactory {
 
   public static BotDifficulty createBot(Difficulty difficulty) {
 
