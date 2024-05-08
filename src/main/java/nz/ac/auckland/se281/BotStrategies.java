@@ -1,5 +1,5 @@
 package nz.ac.auckland.se281;
 
 public interface BotStrategies {
-  public int pickNumber();
+  public String pickNumber();
 }

@@ -4,7 +4,7 @@ public class RandomStrategy implements BotStrategies {
 
   public RandomStrategy() {}
 
-  public int pickNumber() {
-    return Utils.getRandomNumberRange(0, 5);
+  public String pickNumber() {
+    return String.valueOf(Utils.getRandomNumberRange(0, 5));
   }
 }
