@@ -21,9 +21,12 @@ public class Game {
     MessageCli.ASK_INPUT.printMessage();
     String input = Utils.scanner.nextLine();
 
-    MessageCli.PRINT_INFO_HAND.printMessage(playerName, input);
-
-    roundCounter++;
+    if (Integer.valueOf(input) < 0 || Integer.valueOf(input) > 5) {
+      MessageCli.INVALID_INPUT.printMessage();
+    } else {
+      MessageCli.PRINT_INFO_HAND.printMessage(playerName, input);
+      roundCounter++;
+    }
   }
 
   public void endGame() {}
