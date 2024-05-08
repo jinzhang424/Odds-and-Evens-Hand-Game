@@ -8,11 +8,13 @@ public class Game {
 
   private int roundCounter = 1;
   private Player player = null;
+  private BotDifficulty bot = null;
 
   public void newGame(Difficulty difficulty, Choice choice, String[] options) {
     MessageCli.WELCOME_PLAYER.printMessage(options[0]);
     roundCounter = 1;
     player = new Player(options[0]);
+    bot = BotFactory.createBot(difficulty);
   }
 
   public void play() {
