@@ -4,7 +4,7 @@ import nz.ac.auckland.se281.Main.Difficulty;
 
 public class BotFactory {
 
-  public BotDifficulty BotFactory(Difficulty difficulty) {
+  public BotDifficulty createBot(Difficulty difficulty) {
 
     switch (difficulty) {
       case EASY:
