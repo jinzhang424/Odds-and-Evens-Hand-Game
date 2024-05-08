@@ -7,12 +7,12 @@ import nz.ac.auckland.se281.Main.Difficulty;
 public class Game {
 
   private int roundCounter = 1;
-  private String playerName = null;
+  private Player player = null;
 
   public void newGame(Difficulty difficulty, Choice choice, String[] options) {
     MessageCli.WELCOME_PLAYER.printMessage(options[0]);
     roundCounter = 1;
-    playerName = options[0];
+    player = new Player(options[0]);
   }
 
   public void play() {
@@ -28,7 +28,7 @@ public class Game {
       input = Utils.scanner.nextLine();
     }
 
-    MessageCli.PRINT_INFO_HAND.printMessage(playerName, input);
+    MessageCli.PRINT_INFO_HAND.printMessage(player.getPlayerName(), input);
     roundCounter++;
   }
 
