@@ -18,8 +18,10 @@ public class Game {
   }
 
   public void play() {
-    MessageCli.START_ROUND.printMessage(String.valueOf(roundCounter));
 
+    String botNumber = bot.getStrategy().pickNumber();
+
+    MessageCli.START_ROUND.printMessage(String.valueOf(roundCounter));
     MessageCli.ASK_INPUT.printMessage();
     String input = Utils.scanner.nextLine();
 
@@ -31,6 +33,7 @@ public class Game {
     }
 
     MessageCli.PRINT_INFO_HAND.printMessage(player.getPlayerName(), input);
+    MessageCli.PRINT_INFO_HAND.printMessage(bot.getBotName(), botNumber);
     roundCounter++;
   }
 
