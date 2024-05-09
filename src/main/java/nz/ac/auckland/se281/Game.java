@@ -6,6 +6,9 @@ import nz.ac.auckland.se281.Main.Difficulty;
 /** This class represents the Game is the main entry point. */
 public class Game {
 
+  private int playerEvenPicks = 0;
+  private int playerOddPicks = 0;
+
   private int roundCounter = 1;
   private Player player = null;
   private BotDifficulty bot = null;
@@ -33,6 +36,8 @@ public class Game {
       MessageCli.ASK_INPUT.printMessage();
       input = Utils.scanner.nextLine();
     }
+
+    incrementParity(Integer.valueOf(input));
 
     MessageCli.PRINT_INFO_HAND.printMessage(player.getPlayerName(), input);
     MessageCli.PRINT_INFO_HAND.printMessage(bot.getBotName(), botNumber);
@@ -83,4 +88,27 @@ public class Game {
   public void endGame() {}
 
   public void showStats() {}
+
+  public int getHighestParity() {
+
+    if (playerEvenPicks > playerOddPicks) { // 0 indicates player has picked even numbers the most
+      return 0;
+    } else if (playerOddPicks
+        > playerEvenPicks) { // 1 indicates player has picked odd numbers the most
+      return 1;
+    } else { // 2 indicates the player has picked an equal number of odd and even numbers
+      return 2;
+    }
+  }
+
+  public void incrementParity(int playerInput) {
+
+    // Checks if the player input is even or odd and increments playerEvenPicks or playerOddPicks
+    // accordingly
+    if (Utils.isEven(playerInput)) {
+      playerEvenPicks++;
+    } else {
+      playerOddPicks++;
+    }
+  }
 }
