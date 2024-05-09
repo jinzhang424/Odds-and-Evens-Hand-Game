@@ -6,7 +6,6 @@ import nz.ac.auckland.se281.Main.Difficulty;
 /** This class represents the Game is the main entry point. */
 public class Game {
 
-  private int sum = 0;
   private int roundCounter = 1;
   private Player player = null;
   private BotDifficulty bot = null;
@@ -19,6 +18,8 @@ public class Game {
   }
 
   public void play() {
+
+    int sum = 0;
 
     String botNumber = bot.getStrategy().pickNumber();
 
