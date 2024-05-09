@@ -32,4 +32,15 @@ public class Player {
       return 2;
     }
   }
+
+  public void incrementParity(int playerInput) {
+
+    // Checks if the player input is even or odd and increments evenNumPicks or oddNumPicks
+    // accordingly
+    if (Utils.isEven(playerInput)) {
+      evenNumPicks++;
+    } else {
+      oddNumPicks++;
+    }
+  }
 }
