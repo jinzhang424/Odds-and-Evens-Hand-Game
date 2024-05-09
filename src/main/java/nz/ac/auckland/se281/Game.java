@@ -37,6 +37,18 @@ public class Game {
     roundCounter++;
   }
 
+  public void roundResult(int sum) {
+
+    Choice sumOutcome = null;
+
+    // Checking whether the sum was odd or even
+    if (Utils.isEven(sum)) {
+      sumOutcome = Choice.EVEN;
+    } else {
+      sumOutcome = Choice.ODD;
+    }
+  }
+
   public void endGame() {}
 
   public void showStats() {}
