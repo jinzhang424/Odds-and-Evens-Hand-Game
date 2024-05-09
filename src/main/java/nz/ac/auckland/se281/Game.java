@@ -24,7 +24,7 @@ public class Game {
 
     int sum = 0;
 
-    String botNumber = bot.getStrategy().pickNumber();
+    String botNumber;
 
     MessageCli.START_ROUND.printMessage(String.valueOf(roundCounter));
     MessageCli.ASK_INPUT.printMessage();
@@ -37,7 +37,8 @@ public class Game {
       input = Utils.scanner.nextLine();
     }
 
-    incrementParity(Integer.valueOf(input));
+    updateParity(Integer.valueOf(input));
+    botNumber = bot.getStrategy().pickNumber();
 
     MessageCli.PRINT_INFO_HAND.printMessage(player.getPlayerName(), input);
     MessageCli.PRINT_INFO_HAND.printMessage(bot.getBotName(), botNumber);
@@ -110,5 +111,10 @@ public class Game {
     } else {
       playerOddPicks++;
     }
+  }
+
+  public void updateParity(int playerInput) {
+    incrementParity(playerInput);
+    bot.getStrategy().setPlayerHighestParity(getHighestParity());
   }
 }
