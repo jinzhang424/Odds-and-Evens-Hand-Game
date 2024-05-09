@@ -13,7 +13,7 @@ public class Game {
   public void newGame(Difficulty difficulty, Choice choice, String[] options) {
     MessageCli.WELCOME_PLAYER.printMessage(options[0]);
     roundCounter = 1;
-    player = new Player(options[0]);
+    player = new Player(options[0], choice);
     bot = BotFactory.createBot(difficulty);
   }
 
