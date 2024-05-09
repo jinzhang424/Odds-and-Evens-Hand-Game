@@ -9,6 +9,9 @@ public class BotFactory {
     switch (difficulty) {
       case EASY:
         return new EasyBot();
+      case MEDIUM:
+
+      case HARD:
     }
 
     return null;
