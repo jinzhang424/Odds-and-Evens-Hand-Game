@@ -7,4 +7,6 @@ public class RandomStrategy implements BotStrategies {
   public String pickNumber() {
     return String.valueOf(Utils.getRandomNumberRange(0, 5));
   }
+
+  public void setPlayerHighestParity(int parity) {}
 }
