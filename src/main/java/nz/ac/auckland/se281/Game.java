@@ -34,8 +34,6 @@ public class Game {
       input = Utils.scanner.nextLine();
     }
 
-    player.incrementParity(Integer.valueOf(input));
-
     MessageCli.PRINT_INFO_HAND.printMessage(player.getPlayerName(), input);
     MessageCli.PRINT_INFO_HAND.printMessage(bot.getBotName(), botNumber);
 
