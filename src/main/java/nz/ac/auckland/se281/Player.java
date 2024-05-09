@@ -22,7 +22,7 @@ public class Player {
     return winChoice;
   }
 
-  public int getHighestParity(int sum) {
+  public int getHighestParity() {
 
     if (evenNumPicks > oddNumPicks) { // 0 indicates player has picked even numbers the most
       return 0;
