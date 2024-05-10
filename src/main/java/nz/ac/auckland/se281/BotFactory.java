@@ -10,7 +10,7 @@ public class BotFactory {
       case EASY:
         return new EasyBot();
       case MEDIUM:
-
+        return new MediumBot();
       case HARD:
     }
 
