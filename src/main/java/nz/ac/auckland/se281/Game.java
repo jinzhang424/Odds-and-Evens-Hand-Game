@@ -14,10 +14,19 @@ public class Game {
   private BotDifficulty bot = null;
 
   public void newGame(Difficulty difficulty, Choice choice, String[] options) {
+
     MessageCli.WELCOME_PLAYER.printMessage(options[0]);
+
     roundCounter = 1;
+
     player = new Player(options[0], choice);
     bot = BotFactory.createBot(difficulty);
+
+    if (choice.equals(Choice.EVEN)) {
+      bot.getStrategy().setStrategyWinCon(Choice.ODD);
+    } else {
+      bot.getStrategy().setStrategyWinCon(Choice.EVEN);
+    }
   }
 
   public void play() {
