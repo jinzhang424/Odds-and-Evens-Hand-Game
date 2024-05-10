@@ -11,7 +11,11 @@ public class TopStrategy implements BotStrategies {
 
   public String pickNumber() {
 
-    return "";
+    if (winCon.equals(Choice.EVEN)) {
+      return String.valueOf(winConIsEven());
+    } else {
+      return String.valueOf(winConIsOdd());
+    }
   }
 
   public void setPlayerHighestParity(int parity) {
