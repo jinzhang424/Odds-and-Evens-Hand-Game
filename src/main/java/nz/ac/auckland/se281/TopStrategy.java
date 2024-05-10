@@ -30,4 +30,13 @@ public class TopStrategy implements BotStrategies {
       return Utils.getRandomOddNumber();
     }
   }
+
+  public int winConIsOdd() {
+
+    if (playerHighestParity == 0) {
+      return Utils.getRandomOddNumber();
+    } else {
+      return Utils.getRandomEvenNumber();
+    }
+  }
 }
