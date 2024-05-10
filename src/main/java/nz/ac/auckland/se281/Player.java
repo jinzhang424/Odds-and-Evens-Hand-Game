@@ -19,4 +19,18 @@ public class Player {
   public Choice getWinChoice() {
     return winChoice;
   }
+
+  public String pickNumber() {
+
+    String input = Utils.scanner.nextLine();
+
+    // While the input is not valid, print a error message and ask for the player for another input
+    while (Integer.valueOf(input) < 0 || Integer.valueOf(input) > 5) {
+      MessageCli.INVALID_INPUT.printMessage();
+      MessageCli.ASK_INPUT.printMessage();
+      input = Utils.scanner.nextLine();
+    }
+
+    return input;
+  }
 }
