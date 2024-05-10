@@ -28,19 +28,23 @@ public class TopStrategy implements BotStrategies {
 
   public int winConIsEven() {
 
-    if (playerHighestParity == 0) {
+    if (playerHighestParity == 0) { // When player has played more even numbers
       return Utils.getRandomEvenNumber();
-    } else {
+    } else if (playerHighestParity == 1) { // When player has played more odd numbers
       return Utils.getRandomOddNumber();
+    } else { // When player has played an equal amount of odd and even numbers
+      return Utils.getRandomNumberRange(0, 5);
     }
   }
 
   public int winConIsOdd() {
 
-    if (playerHighestParity == 0) {
+    if (playerHighestParity == 0) { // When player has played more even numbers
       return Utils.getRandomOddNumber();
-    } else {
+    } else if (playerHighestParity == 1) { // When player has played more odd numbers
       return Utils.getRandomEvenNumber();
+    } else { // When player has played an equal amount of odd and even numbers
+      return Utils.getRandomNumberRange(0, 5);
     }
   }
 }
