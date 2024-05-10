@@ -63,28 +63,25 @@ public class Game {
     }
 
     // Printing the round outcome
-    switch (sumOutcome) {
-      case EVEN:
-        if (player
-            .getWinChoice()
-            .equals(
-                Choice.EVEN)) { // Sum is even so player wins if they picked even otherwise bot wins
-          MessageCli.PRINT_OUTCOME_ROUND.printMessage(
-              String.valueOf(sum), "EVEN", player.getPlayerName());
-        } else {
-          MessageCli.PRINT_OUTCOME_ROUND.printMessage(
-              String.valueOf(sum), "EVEN", bot.getBotName());
-        }
-      case ODD:
-        if (player
-            .getWinChoice()
-            .equals(
-                Choice.ODD)) { // Sum is odd so player wins if they picked odd otherwise bot wins
-          MessageCli.PRINT_OUTCOME_ROUND.printMessage(
-              String.valueOf(sum), "ODD", player.getPlayerName());
-        } else {
-          MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "ODD", bot.getBotName());
-        }
+    if (sumOutcome.equals(Choice.EVEN)) { // The sum was even
+      if (player
+          .getWinChoice()
+          .equals(
+              Choice.EVEN)) { // Sum is even so player wins if they picked even otherwise bot wins
+        MessageCli.PRINT_OUTCOME_ROUND.printMessage(
+            String.valueOf(sum), "EVEN", player.getPlayerName());
+      } else {
+        MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "EVEN", bot.getBotName());
+      }
+    } else { // The sum was odd
+      if (player
+          .getWinChoice()
+          .equals(Choice.ODD)) { // Sum is odd so player wins if they picked odd otherwise bot wins
+        MessageCli.PRINT_OUTCOME_ROUND.printMessage(
+            String.valueOf(sum), "ODD", player.getPlayerName());
+      } else {
+        MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "ODD", bot.getBotName());
+      }
     }
   }
 
