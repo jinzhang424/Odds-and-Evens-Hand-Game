@@ -70,8 +70,10 @@ public class Game {
               Choice.EVEN)) { // Sum is even so player wins if they picked even otherwise bot wins
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(
             String.valueOf(sum), "EVEN", player.getPlayerName());
+        bot.setLostPreviousRound(true);
       } else {
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "EVEN", bot.getBotName());
+        bot.setLostPreviousRound(false);
       }
     } else { // The sum was odd
       if (player
@@ -79,8 +81,10 @@ public class Game {
           .equals(Choice.ODD)) { // Sum is odd so player wins if they picked odd otherwise bot wins
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(
             String.valueOf(sum), "ODD", player.getPlayerName());
+        bot.setLostPreviousRound(true);
       } else {
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "ODD", bot.getBotName());
+        bot.setLostPreviousRound(false);
       }
     }
   }
