@@ -21,4 +21,13 @@ public class TopStrategy implements BotStrategies {
   public void setStrategyWinCon(Choice winCon) {
     this.winCon = winCon;
   }
+
+  public int winConIsEven() {
+
+    if (playerHighestParity == 0) {
+      return Utils.getRandomEvenNumber();
+    } else {
+      return Utils.getRandomOddNumber();
+    }
+  }
 }
