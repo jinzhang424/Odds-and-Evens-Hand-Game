@@ -45,4 +45,8 @@ public class HardBot implements BotDifficulty {
       }
     }
   }
+
+  public void setLostPreviousRound(boolean botLost) {
+    lostPreviousRound = botLost;
+  }
 }

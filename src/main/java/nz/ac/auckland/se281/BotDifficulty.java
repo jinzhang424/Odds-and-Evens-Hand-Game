@@ -4,4 +4,6 @@ public interface BotDifficulty {
   public BotStrategies getStrategy();
 
   public String getBotName();
+
+  public void setLostPreviousRound(boolean botLost);
 }
