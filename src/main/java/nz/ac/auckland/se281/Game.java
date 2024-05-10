@@ -20,12 +20,11 @@ public class Game {
     roundCounter = 1;
 
     player = new Player(options[0], choice);
-    bot = BotFactory.createBot(difficulty);
 
     if (choice.equals(Choice.EVEN)) {
-      bot.getStrategy().setStrategyWinCon(Choice.ODD);
+      bot = BotFactory.createBot(difficulty, Choice.ODD);
     } else {
-      bot.getStrategy().setStrategyWinCon(Choice.EVEN);
+      bot = BotFactory.createBot(difficulty, Choice.EVEN);
     }
   }
 
