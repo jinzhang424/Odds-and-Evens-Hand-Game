@@ -33,7 +33,7 @@ public class HardBot implements BotDifficulty {
 
   public void setStrategy() {
     roundCounter++;
-
+    System.out.println("IT IS CURRENTLY ROUND " + roundCounter);
     // When after round 3, toggles the strategy of the bot if it lost
     if (roundCounter > 3 && lostPreviousRound) {
       if (strategy.equals(strategyRandom)) {
@@ -48,5 +48,9 @@ public class HardBot implements BotDifficulty {
 
   public void setLostPreviousRound(boolean botLost) {
     lostPreviousRound = botLost;
+  }
+
+  public BotStrategies getTopStrategy() {
+    return strategyTop;
   }
 }

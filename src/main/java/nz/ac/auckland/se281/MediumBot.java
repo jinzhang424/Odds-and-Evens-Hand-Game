@@ -39,4 +39,8 @@ public class MediumBot implements BotDifficulty {
   }
 
   public void setLostPreviousRound(boolean botLost) {}
+
+  public BotStrategies getTopStrategy() {
+    return strategyTop;
+  }
 }

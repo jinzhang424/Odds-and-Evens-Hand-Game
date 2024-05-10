@@ -19,4 +19,8 @@ public class EasyBot implements BotDifficulty {
   }
 
   public void setLostPreviousRound(boolean botLost) {}
+
+  public BotStrategies getTopStrategy() {
+    return strategy;
+  }
 }

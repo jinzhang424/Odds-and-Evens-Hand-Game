@@ -118,6 +118,6 @@ public class Game {
 
   public void updateParity(int playerInput) {
     incrementParity(playerInput);
-    bot.getStrategy().setPlayerHighestParity(getHighestParity());
+    bot.getTopStrategy().setPlayerHighestParity(getHighestParity());
   }
 }
