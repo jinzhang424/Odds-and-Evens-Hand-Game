@@ -32,19 +32,13 @@ public class Game {
   public void play() {
 
     int sum = 0;
-
+    String input = "";
     String botNumber;
 
     MessageCli.START_ROUND.printMessage(String.valueOf(roundCounter));
     MessageCli.ASK_INPUT.printMessage();
-    String input = Utils.scanner.nextLine();
 
-    // While the input is not valid, print a error message and ask for the player for another input
-    while (Integer.valueOf(input) < 0 || Integer.valueOf(input) > 5) {
-      MessageCli.INVALID_INPUT.printMessage();
-      MessageCli.ASK_INPUT.printMessage();
-      input = Utils.scanner.nextLine();
-    }
+    input = player.pickNumber();
 
     updateParity(Integer.valueOf(input));
     botNumber = bot.getStrategy().pickNumber();
