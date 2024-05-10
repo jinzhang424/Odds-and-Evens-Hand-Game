@@ -13,6 +13,7 @@ public class BotFactory {
       case MEDIUM:
         return new MediumBot(winCon);
       case HARD:
+        return new HardBot(winCon);
     }
 
     return null;
