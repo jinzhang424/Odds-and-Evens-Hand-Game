@@ -1,5 +1,7 @@
 package nz.ac.auckland.se281;
 
+import nz.ac.auckland.se281.Main.Choice;
+
 public class RandomStrategy implements BotStrategies {
 
   public RandomStrategy() {}
@@ -9,4 +11,6 @@ public class RandomStrategy implements BotStrategies {
   }
 
   public void setPlayerHighestParity(int parity) {}
+
+  public void setStrategyWinCon(Choice winCon) {}
 }
