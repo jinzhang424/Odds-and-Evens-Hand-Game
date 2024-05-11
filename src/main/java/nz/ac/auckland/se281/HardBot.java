@@ -20,10 +20,20 @@ public class HardBot implements BotDifficulty {
     strategyTop.setStrategyWinCon(winCon);
   }
 
+  /**
+   * A getter for the bot's name.
+   *
+   * @return the bot's name
+   */
   public String getBotName() {
     return botName;
   }
 
+  /**
+   * Getter for the strategy the bot will be using against the player.
+   *
+   * @return the strategy the bot will use to pick a number
+   */
   public BotStrategies getStrategy() {
     this.setStrategy();
     return strategy;
@@ -31,7 +41,7 @@ public class HardBot implements BotDifficulty {
 
   /**
    * Starts changing the bot's strategy after the first 3 rounds, by toggling if it lost the
-   * previous round
+   * previous round.
    */
   public void setStrategy() {
 
@@ -48,6 +58,11 @@ public class HardBot implements BotDifficulty {
     }
   }
 
+  /**
+   * Updates whether the bot won/lost the previous round.
+   *
+   * @param botLost the variable parameter determining whether the bot has lost
+   */
   public void setLostPreviousRound(boolean botLost) {
     lostPreviousRound = botLost;
   }
