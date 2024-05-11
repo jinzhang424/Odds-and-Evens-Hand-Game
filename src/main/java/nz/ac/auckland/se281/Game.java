@@ -13,6 +13,9 @@ public class Game {
   private Player player = null;
   private BotDifficulty bot = null;
 
+  private int playerWinCount = 0;
+  private int botWinCount = 0;
+
   public void newGame(Difficulty difficulty, Choice choice, String[] options) {
 
     MessageCli.WELCOME_PLAYER.printMessage(options[0]);
@@ -76,9 +79,11 @@ public class Game {
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(
             String.valueOf(sum), "EVEN", player.getPlayerName());
         bot.setLostPreviousRound(true);
+        playerWinCount++;
       } else {
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "EVEN", bot.getBotName());
         bot.setLostPreviousRound(false);
+        botWinCount++;
       }
     } else { // The sum was odd
       if (player
@@ -87,9 +92,11 @@ public class Game {
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(
             String.valueOf(sum), "ODD", player.getPlayerName());
         bot.setLostPreviousRound(true);
+        playerWinCount++;
       } else {
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "ODD", bot.getBotName());
         bot.setLostPreviousRound(false);
+        botWinCount++;
       }
     }
   }
