@@ -8,7 +8,7 @@ public class MediumBot implements BotDifficulty {
   private BotStrategies strategy;
   private BotStrategies strategyRandom;
   private BotStrategies strategyTop;
-  private int roundCounter = 0;
+  private int roundCounter;
 
   public MediumBot(Choice winCon) {
 
@@ -17,6 +17,7 @@ public class MediumBot implements BotDifficulty {
     strategyTop.setStrategyWinCon(winCon);
 
     strategy = strategyRandom;
+    roundCounter = 0;
   }
 
   public String getBotName() {
