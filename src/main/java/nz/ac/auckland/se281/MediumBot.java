@@ -5,9 +5,9 @@ import nz.ac.auckland.se281.Main.Choice;
 public class MediumBot implements BotDifficulty {
 
   private String botName = "HAL-9000";
-  private BotStrategies strategy = null;
-  private BotStrategies strategyRandom = null;
-  private BotStrategies strategyTop = null;
+  private BotStrategies strategy;
+  private BotStrategies strategyRandom;
+  private BotStrategies strategyTop;
   private int roundCounter = 0;
 
   public MediumBot(Choice winCon) {
