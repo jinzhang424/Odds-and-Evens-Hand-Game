@@ -42,8 +42,8 @@ public class Game {
       return;
     }
 
-    int sum = 0;
-    String input = "";
+    int sum;
+    String input;
     String botNumber;
 
     MessageCli.START_ROUND.printMessage(String.valueOf(roundCounter));
@@ -65,7 +65,7 @@ public class Game {
 
   public void roundResult(int sum) {
 
-    Choice sumOutcome = null;
+    Choice sumOutcome;
 
     // Checking whether the sum was odd or even
     if (Utils.isEven(sum)) {
