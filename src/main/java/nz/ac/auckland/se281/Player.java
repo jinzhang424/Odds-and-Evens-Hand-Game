@@ -4,8 +4,8 @@ import nz.ac.auckland.se281.Main.Choice;
 
 public class Player {
 
-  private String playerName = null;
-  private Choice winChoice = null;
+  private String playerName;
+  private Choice winChoice;
 
   public Player(String name, Choice winChoice) {
     playerName = name;
