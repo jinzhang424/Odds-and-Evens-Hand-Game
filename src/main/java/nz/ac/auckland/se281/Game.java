@@ -16,6 +16,16 @@ public class Game {
   private int playerWinCount = 0;
   private int botWinCount = 0;
 
+  /**
+   * Creates a new game by intializing the starting variables. It also creates an instance for of
+   * player and assigns the player instance with a name and their win condition. It then determines
+   * the bot's win condition by whichever win condition the player didn't pick and passes that into
+   * the bot's constructor.
+   *
+   * @param difficulty the difficulty of the bot the player will be up against
+   * @param choice the players win condition (Even or Odd)
+   * @param options contains the player input for their name
+   */
   public void newGame(Difficulty difficulty, Choice choice, String[] options) {
 
     MessageCli.WELCOME_PLAYER.printMessage(options[0]);
@@ -35,6 +45,11 @@ public class Game {
     }
   }
 
+  /**
+   * This method asks for the player's input and gets the bot input and takes their sum and passes
+   * that into method roundResult and to determine the winner of the round. Then updates the number
+   * of times a player has picked an odd or even number by calling the method updateParity
+   */
   public void play() {
 
     int sum;
@@ -65,6 +80,15 @@ public class Game {
     roundCounter++;
   }
 
+  /**
+   * Uses sum to determine the winner of the round by first determining if the sum is even or odd.
+   * It then uses that to determine whether the player or bot won by checking the win condition of
+   * the player. If it matches that of the player, it must mean that the player has won otherwise
+   * the bot wins. It also updates the number of times the bot won or lost and updates whether the
+   * bot won or lost the round.
+   *
+   * @param sum the sum of the player's and bot's input
+   */
   public void roundResult(int sum) {
 
     Choice sumOutcome;
@@ -82,6 +106,7 @@ public class Game {
           .getWinChoice()
           .equals(
               Choice.EVEN)) { // Sum is even so player wins if they picked even otherwise bot wins
+
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(
             String.valueOf(sum), "EVEN", player.getPlayerName());
 
@@ -98,6 +123,7 @@ public class Game {
       if (player
           .getWinChoice()
           .equals(Choice.ODD)) { // Sum is odd so player wins if they picked odd otherwise bot wins
+
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(
             String.valueOf(sum), "ODD", player.getPlayerName());
 
@@ -112,6 +138,11 @@ public class Game {
     }
   }
 
+  /**
+   * First checks if a game has been created or not. If so shows the stats of the game and
+   * determines the whether the player or bot won or if its a tie and prints the message
+   * accordingly. It then resets all the fields.
+   */
   public void endGame() {
 
     // Checks if a game has been created by checking whether player is null
