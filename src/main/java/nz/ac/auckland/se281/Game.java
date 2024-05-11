@@ -37,21 +37,21 @@ public class Game {
 
   public void play() {
 
+    int sum;
+    String input;
+    String botNumber;
+
     if (player == null) {
       MessageCli.GAME_NOT_STARTED.printMessage();
       return;
     }
 
-    int sum;
-    String input;
-    String botNumber;
-
+    // Takes the input
     MessageCli.START_ROUND.printMessage(String.valueOf(roundCounter));
     MessageCli.ASK_INPUT.printMessage();
 
     input = player.pickNumber();
 
-    updateParity(Integer.valueOf(input));
     botNumber = bot.getStrategy().pickNumber();
 
     MessageCli.PRINT_INFO_HAND.printMessage(player.getPlayerName(), input);
@@ -59,6 +59,8 @@ public class Game {
 
     sum = Integer.valueOf(input) + Integer.valueOf(botNumber);
     roundResult(sum);
+
+    updateParity(Integer.valueOf(input));
 
     roundCounter++;
   }
