@@ -1,12 +1,10 @@
 package nz.ac.auckland.se281;
 
 import nz.ac.auckland.se281.Main.Choice;
-import nz.ac.auckland.se281.Main.Difficulty;
 
 public class MediumBot implements BotDifficulty {
 
   private String botName = "HAL-9000";
-  private Difficulty difficulty = Difficulty.EASY;
   private BotStrategies strategy = null;
   private BotStrategies strategyRandom = null;
   private BotStrategies strategyTop = null;
