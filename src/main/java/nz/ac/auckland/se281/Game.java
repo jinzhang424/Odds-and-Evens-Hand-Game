@@ -94,9 +94,19 @@ public class Game {
     }
   }
 
-  public void endGame() {}
+  public void endGame() {
+    if (player == null) {
+      MessageCli.GAME_NOT_STARTED.printMessage();
+      return;
+    }
+  }
 
-  public void showStats() {}
+  public void showStats() {
+    if (player == null) {
+      MessageCli.GAME_NOT_STARTED.printMessage();
+      return;
+    }
+  }
 
   public int getHighestParity() {
 
