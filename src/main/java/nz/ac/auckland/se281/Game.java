@@ -30,6 +30,11 @@ public class Game {
 
   public void play() {
 
+    if (player == null) {
+      MessageCli.GAME_NOT_STARTED.printMessage();
+      return;
+    }
+
     int sum = 0;
     String input = "";
     String botNumber;
