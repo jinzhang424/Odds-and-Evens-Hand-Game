@@ -174,7 +174,7 @@ public class Game {
     botWinCount = 0;
   }
 
-  /** Prints a message showing how many wins/losses the player and bot has */
+  /** Prints a message showing how many wins/losses the player and bot has. */
   public void showStats() {
 
     // Checks if a game has been created by checking whether player is null
@@ -212,9 +212,9 @@ public class Game {
 
   /**
    * Keeps track of the number of odd and even numbers the player has picked throughout the game by
-   * incrementing the fields, playerEvenPicks and playerOddPicks
+   * incrementing the fields, playerEvenPicks and playerOddPicks.
    *
-   * @param playerInput the input from the player
+   * @param playerInput the input from the player (0 to 5)
    */
   public void incrementParity(int playerInput) {
 
@@ -230,9 +230,9 @@ public class Game {
   /**
    * Updates the number of odd and even picks of the player by calling incrementParity and updates
    * the bot on whether the player picks more odd numbers, even numbers or an equal of both by using
-   * a setter
+   * a setter.
    *
-   * @param playerInput
+   * @param playerInput the player's input value (0 to 5)
    */
   public void updateParity(int playerInput) {
     incrementParity(playerInput);
