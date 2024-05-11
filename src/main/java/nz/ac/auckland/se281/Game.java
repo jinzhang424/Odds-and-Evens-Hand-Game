@@ -20,7 +20,11 @@ public class Game {
 
     MessageCli.WELCOME_PLAYER.printMessage(options[0]);
 
+    playerEvenPicks = 0;
+    playerOddPicks = 0;
     roundCounter = 1;
+    playerWinCount = 0;
+    botWinCount = 0;
 
     player = new Player(options[0], choice);
 
