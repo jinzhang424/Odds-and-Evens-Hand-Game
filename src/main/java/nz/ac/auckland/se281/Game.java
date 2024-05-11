@@ -46,22 +46,22 @@ public class Game {
       return;
     }
 
-    // Takes the input
+    // Opening messsage and asking player for input
     MessageCli.START_ROUND.printMessage(String.valueOf(roundCounter));
     MessageCli.ASK_INPUT.printMessage();
 
+    // Get the player's and bot's number
     input = player.pickNumber();
-
     botNumber = bot.getStrategy().pickNumber();
 
     MessageCli.PRINT_INFO_HAND.printMessage(player.getPlayerName(), input);
     MessageCli.PRINT_INFO_HAND.printMessage(bot.getBotName(), botNumber);
 
+    // Getting the sum and determining the round result
     sum = Integer.valueOf(input) + Integer.valueOf(botNumber);
     roundResult(sum);
 
     updateParity(Integer.valueOf(input));
-
     roundCounter++;
   }
 
@@ -84,10 +84,13 @@ public class Game {
               Choice.EVEN)) { // Sum is even so player wins if they picked even otherwise bot wins
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(
             String.valueOf(sum), "EVEN", player.getPlayerName());
+
+        // Recording the necessary events of the round (whether bot lost and win count)
         bot.setLostPreviousRound(true);
         playerWinCount++;
       } else {
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "EVEN", bot.getBotName());
+
         bot.setLostPreviousRound(false);
         botWinCount++;
       }
@@ -97,10 +100,12 @@ public class Game {
           .equals(Choice.ODD)) { // Sum is odd so player wins if they picked odd otherwise bot wins
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(
             String.valueOf(sum), "ODD", player.getPlayerName());
+
         bot.setLostPreviousRound(true);
         playerWinCount++;
       } else {
         MessageCli.PRINT_OUTCOME_ROUND.printMessage(String.valueOf(sum), "ODD", bot.getBotName());
+
         bot.setLostPreviousRound(false);
         botWinCount++;
       }
@@ -108,6 +113,8 @@ public class Game {
   }
 
   public void endGame() {
+
+    // Checks if a game has been created by checking whether player is null
     if (player == null) {
       MessageCli.GAME_NOT_STARTED.printMessage();
       return;
@@ -115,6 +122,7 @@ public class Game {
 
     showStats();
 
+    // Printing out the final game message of who won or whether it was a tie
     if (playerWinCount > botWinCount) {
       MessageCli.PRINT_END_GAME.printMessage(player.getPlayerName());
     } else if (playerWinCount < botWinCount) {
@@ -123,6 +131,7 @@ public class Game {
       MessageCli.PRINT_END_GAME_TIE.printMessage();
     }
 
+    // Resetting the game
     playerEvenPicks = 0;
     playerOddPicks = 0;
 
@@ -135,6 +144,8 @@ public class Game {
   }
 
   public void showStats() {
+
+    // Checks if a game has been created by checking whether player is null
     if (player == null) {
       MessageCli.GAME_NOT_STARTED.printMessage();
       return;
