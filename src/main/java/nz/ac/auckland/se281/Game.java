@@ -174,6 +174,7 @@ public class Game {
     botWinCount = 0;
   }
 
+  /** Prints a message showing how many wins/losses the player and bot has */
   public void showStats() {
 
     // Checks if a game has been created by checking whether player is null
@@ -190,6 +191,13 @@ public class Game {
         bot.getBotName(), String.valueOf(botWinCount), String.valueOf(playerWinCount));
   }
 
+  /**
+   * Determines whether the player has picked more even or odd numbers, or if they've picked an
+   * equal amount of even or odd numbers
+   *
+   * @return An indicator of whether the player has picked more even numbers, odd numbers or an
+   *     equal amount of both denoted by 0, 1 and 2 respectively
+   */
   public int getHighestParity() {
 
     if (playerEvenPicks > playerOddPicks) { // 0 indicates player has picked even numbers the most
@@ -202,6 +210,12 @@ public class Game {
     }
   }
 
+  /**
+   * Keeps track of the number of odd and even numbers the player has picked throughout the game by
+   * incrementing the fields, playerEvenPicks and playerOddPicks
+   *
+   * @param playerInput the input from the player
+   */
   public void incrementParity(int playerInput) {
 
     // Checks if the player input is even or odd and increments playerEvenPicks or playerOddPicks
@@ -213,6 +227,13 @@ public class Game {
     }
   }
 
+  /**
+   * Updates the number of odd and even picks of the player by calling incrementParity and updates
+   * the bot on whether the player picks more odd numbers, even numbers or an equal of both by using
+   * a setter
+   *
+   * @param playerInput
+   */
   public void updateParity(int playerInput) {
     incrementParity(playerInput);
     bot.getTopStrategy().setPlayerHighestParity(getHighestParity());
