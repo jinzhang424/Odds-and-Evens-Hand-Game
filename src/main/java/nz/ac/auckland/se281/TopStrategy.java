@@ -9,6 +9,10 @@ public class TopStrategy implements BotStrategies {
 
   public TopStrategy() {}
 
+  /**
+   * Picks a number by either calling winConIsEven or winConisOdd depending on the bot's win
+   * condition
+   */
   public String pickNumber() {
 
     if (winCon.equals(Choice.EVEN)) {
@@ -26,6 +30,13 @@ public class TopStrategy implements BotStrategies {
     this.winCon = winCon;
   }
 
+  /**
+   * Picks a number depending of whether the player has a tendency to pick more even or odd numbers.
+   * The number picked will try to satisfy the bot's win condition based on the player's tendency.
+   * If the player has picked and equal number of odd and even numbers, pick randomly
+   *
+   * @return the bot's number pick
+   */
   public int winConIsEven() {
 
     if (playerHighestParity == 0) { // When player has played more even numbers
@@ -37,6 +48,13 @@ public class TopStrategy implements BotStrategies {
     }
   }
 
+  /**
+   * Picks a number depending of whether the player has a tendency to pick more even or odd numbers.
+   * The number picked will try to satisfy the bot's win condition based on the player's tendency.
+   * If the player has picked and equal number of odd and even numbers, pick randomly
+   *
+   * @return the bot's number pick
+   */
   public int winConIsOdd() {
 
     if (playerHighestParity == 0) { // When player has played more even numbers
