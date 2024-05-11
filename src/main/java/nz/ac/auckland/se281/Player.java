@@ -20,6 +20,13 @@ public class Player {
     return winChoice;
   }
 
+  /**
+   * Gets input from plater by using a scanner. If the input from the player is invalid, it will
+   * print a message telling the player that the input is invalid and continue asking the player for
+   * input until the player enters a valid input
+   *
+   * @return The player's input numerical input (0 to 5 inclusive)
+   */
   public String pickNumber() {
 
     String input = Utils.scanner.nextLine();
