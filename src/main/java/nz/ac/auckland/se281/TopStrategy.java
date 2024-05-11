@@ -7,8 +7,6 @@ public class TopStrategy implements BotStrategies {
   private int playerHighestParity = 0;
   private Choice winCon = null;
 
-  public TopStrategy() {}
-
   /**
    * Picks a number by either calling winConIsEven or winConisOdd depending on the bot's win
    * condition
