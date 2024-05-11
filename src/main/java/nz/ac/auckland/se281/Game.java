@@ -106,6 +106,16 @@ public class Game {
       MessageCli.GAME_NOT_STARTED.printMessage();
       return;
     }
+
+    showStats();
+
+    if (playerWinCount > botWinCount) {
+      MessageCli.PRINT_END_GAME.printMessage(player.getPlayerName());
+    } else if (playerWinCount < botWinCount) {
+      MessageCli.PRINT_END_GAME.printMessage(bot.getBotName());
+    } else {
+      MessageCli.PRINT_END_GAME_TIE.printMessage();
+    }
   }
 
   public void showStats() {
@@ -113,6 +123,13 @@ public class Game {
       MessageCli.GAME_NOT_STARTED.printMessage();
       return;
     }
+
+    // Prints the current number of wins/losses the player and bot has
+    MessageCli.PRINT_PLAYER_WINS.printMessage(
+        player.getPlayerName(), String.valueOf(playerWinCount), String.valueOf(botWinCount));
+
+    MessageCli.PRINT_PLAYER_WINS.printMessage(
+        player.getPlayerName(), String.valueOf(botWinCount), String.valueOf(playerWinCount));
   }
 
   public int getHighestParity() {
