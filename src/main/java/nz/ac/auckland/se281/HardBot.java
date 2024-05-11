@@ -29,6 +29,10 @@ public class HardBot implements BotDifficulty {
     return strategy;
   }
 
+  /**
+   * Starts changing the bot's strategy after the first 3 rounds, by toggling if it lost the
+   * previous round
+   */
   public void setStrategy() {
 
     roundCounter++;
