@@ -116,6 +116,16 @@ public class Game {
     } else {
       MessageCli.PRINT_END_GAME_TIE.printMessage();
     }
+
+    playerEvenPicks = 0;
+    playerOddPicks = 0;
+
+    roundCounter = 1;
+    player = null;
+    bot = null;
+
+    playerWinCount = 0;
+    botWinCount = 0;
   }
 
   public void showStats() {
