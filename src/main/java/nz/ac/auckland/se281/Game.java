@@ -139,7 +139,7 @@ public class Game {
         player.getPlayerName(), String.valueOf(playerWinCount), String.valueOf(botWinCount));
 
     MessageCli.PRINT_PLAYER_WINS.printMessage(
-        player.getPlayerName(), String.valueOf(botWinCount), String.valueOf(playerWinCount));
+        bot.getBotName(), String.valueOf(botWinCount), String.valueOf(playerWinCount));
   }
 
   public int getHighestParity() {
