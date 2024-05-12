@@ -1,6 +1,6 @@
 package nz.ac.auckland.se281;
 
-/** Easy level difficulty bot that simply chooses numbers at random */
+/** Easy level difficulty bot that simply chooses numbers at random. */
 public class EasyBot implements BotDifficulty {
 
   private String botName = "HAL-9000";

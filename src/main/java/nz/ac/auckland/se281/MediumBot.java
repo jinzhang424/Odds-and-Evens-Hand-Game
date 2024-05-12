@@ -4,7 +4,7 @@ import nz.ac.auckland.se281.Main.Choice;
 
 /**
  * The medium level bot that uses the Random strategy and switches to the Top strategy after the 3rd
- * round
+ * round.
  */
 public class MediumBot implements BotDifficulty {
 

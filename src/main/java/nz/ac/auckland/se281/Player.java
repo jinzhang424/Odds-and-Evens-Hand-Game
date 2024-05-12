@@ -2,7 +2,7 @@ package nz.ac.auckland.se281;
 
 import nz.ac.auckland.se281.Main.Choice;
 
-/** Class for the player which contains all necessary elements for the player */
+/** Class for the player which contains all necessary elements for the player. */
 public class Player {
 
   private String playerName;

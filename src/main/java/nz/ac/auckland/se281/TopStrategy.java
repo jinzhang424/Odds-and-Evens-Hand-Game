@@ -4,7 +4,7 @@ import nz.ac.auckland.se281.Main.Choice;
 
 /**
  * A strategy that chooses a number based on its own win condition (EVEN or ODD) and the player's
- * tendency to pick even or odd numbers
+ * tendency to pick even or odd numbers.
  */
 public class TopStrategy implements BotStrategies {
 

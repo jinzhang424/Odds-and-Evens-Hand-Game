@@ -4,7 +4,7 @@ import nz.ac.auckland.se281.Main.Choice;
 
 /**
  * The hard bot that uses strategies Top and Random, and changes its strategy each time it loses a
- * round
+ * round.
  */
 public class HardBot implements BotDifficulty {
 

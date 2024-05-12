@@ -5,7 +5,7 @@ import nz.ac.auckland.se281.Main.Difficulty;
 
 /**
  * This class uses the Factory design pattern to create instances of bots with different
- * difficulties based on the player's input
+ * difficulties based on the player's input.
  */
 public class BotFactory {
 
