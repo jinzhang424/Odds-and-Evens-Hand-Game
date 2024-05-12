@@ -11,6 +11,12 @@ public class HardBot implements BotDifficulty {
   private int roundCounter = 0;
   private boolean lostPreviousRound = false;
 
+  /**
+   * Constructor for the HardBot class. This is used to intialize strategyRandom, strategyTop and
+   * set the starting strategy of the HardBot to strategyRandom.
+   *
+   * @param winCon the win condition of the bot
+   */
   public HardBot(Choice winCon) {
 
     strategyRandom = new RandomStrategy();
