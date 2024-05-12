@@ -3,6 +3,10 @@ package nz.ac.auckland.se281;
 import nz.ac.auckland.se281.Main.Choice;
 import nz.ac.auckland.se281.Main.Difficulty;
 
+/**
+ * This class uses the Factory design pattern to create instances of bots with different
+ * difficulties based on the player's input
+ */
 public class BotFactory {
 
   /**

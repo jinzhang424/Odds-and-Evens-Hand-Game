@@ -2,6 +2,10 @@ package nz.ac.auckland.se281;
 
 import nz.ac.auckland.se281.Main.Choice;
 
+/**
+ * The hard bot that uses strategies Top and Random, and changes its strategy each time it loses a
+ * round
+ */
 public class HardBot implements BotDifficulty {
 
   private String botName = "HAL-9000";

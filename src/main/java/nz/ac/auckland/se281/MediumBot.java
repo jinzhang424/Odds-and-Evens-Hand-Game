@@ -2,6 +2,10 @@ package nz.ac.auckland.se281;
 
 import nz.ac.auckland.se281.Main.Choice;
 
+/**
+ * The medium level bot that uses the Random strategy and switches to the Top strategy after the 3rd
+ * round
+ */
 public class MediumBot implements BotDifficulty {
 
   private String botName = "HAL-9000";
