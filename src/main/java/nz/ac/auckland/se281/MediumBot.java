@@ -20,15 +20,26 @@ public class MediumBot implements BotDifficulty {
     roundCounter = 0;
   }
 
+  /**
+   * Getter for the bot's name.
+   *
+   * @return bot's name
+   */
   public String getBotName() {
     return botName;
   }
 
+  /**
+   * Updates the bot's strategy by calling setStrategy and then returns the bot's strategy.
+   *
+   * @return the bot's strategy
+   */
   public BotStrategies getStrategy() {
     this.setStrategy();
     return strategy;
   }
 
+  /** After the first 3 rounds, change the bot's strategy to a TopStrategy. */
   public void setStrategy() {
     roundCounter++;
 
@@ -39,6 +50,7 @@ public class MediumBot implements BotDifficulty {
 
   public void setLostPreviousRound(boolean botLost) {}
 
+  /** Getter for the TopStrategy of the bot. */
   public BotStrategies getTopStrategy() {
     return strategyTop;
   }

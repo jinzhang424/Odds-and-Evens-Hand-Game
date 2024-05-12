@@ -193,7 +193,7 @@ public class Game {
 
   /**
    * Determines whether the player has picked more even or odd numbers, or if they've picked an
-   * equal amount of even or odd numbers
+   * equal amount of even or odd numbers.
    *
    * @return An indicator of whether the player has picked more even numbers, odd numbers or an
    *     equal amount of both denoted by 0, 1 and 2 respectively
