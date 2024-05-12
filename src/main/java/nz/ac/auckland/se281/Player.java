@@ -7,6 +7,13 @@ public class Player {
   private String playerName;
   private Choice winChoice;
 
+  /**
+   * Constructor for class Player. This sets the player's name and win condition based on the
+   * player's input
+   *
+   * @param name input string of the name of the player
+   * @param winChoice input win condition of the player (EVEN or ODD)
+   */
   public Player(String name, Choice winChoice) {
     playerName = name;
     this.winChoice = winChoice;
