@@ -20,10 +20,22 @@ public class TopStrategy implements BotStrategies {
     }
   }
 
+  /**
+   * Setter for the player's parity (i.e. whether the picked more even numbers, odd numbers or an
+   * equal amount of both (denoted by 0, 1 and 2 respectively))
+   *
+   * @param parity the player's parity that determines whether they picked more even numbers, odd
+   *     numbers or an equal amount of both
+   */
   public void setPlayerHighestParity(int parity) {
     playerHighestParity = parity;
   }
 
+  /**
+   * Sets the win condition for the strategy
+   *
+   * @param winCon The win condition of the bot
+   */
   public void setStrategyWinCon(Choice winCon) {
     this.winCon = winCon;
   }
