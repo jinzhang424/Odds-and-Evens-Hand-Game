@@ -9,7 +9,7 @@ public class TopStrategy implements BotStrategies {
 
   /**
    * Picks a number by either calling winConIsEven or winConisOdd depending on the bot's win
-   * condition
+   * condition.
    */
   public String pickNumber() {
 
@@ -22,7 +22,7 @@ public class TopStrategy implements BotStrategies {
 
   /**
    * Setter for the player's parity (i.e. whether the picked more even numbers, odd numbers or an
-   * equal amount of both (denoted by 0, 1 and 2 respectively))
+   * equal amount of both (denoted by 0, 1 and 2 respectively)).
    *
    * @param parity the player's parity that determines whether they picked more even numbers, odd
    *     numbers or an equal amount of both
@@ -32,7 +32,7 @@ public class TopStrategy implements BotStrategies {
   }
 
   /**
-   * Sets the win condition for the strategy
+   * Sets the win condition for the strategy.
    *
    * @param winCon The win condition of the bot
    */
@@ -43,7 +43,7 @@ public class TopStrategy implements BotStrategies {
   /**
    * Picks a number depending of whether the player has a tendency to pick more even or odd numbers.
    * The number picked will try to satisfy the bot's win condition based on the player's tendency.
-   * If the player has picked and equal number of odd and even numbers, pick randomly
+   * If the player has picked and equal number of odd and even numbers, pick randomly.
    *
    * @return the bot's number pick
    */
@@ -61,7 +61,7 @@ public class TopStrategy implements BotStrategies {
   /**
    * Picks a number depending of whether the player has a tendency to pick more even or odd numbers.
    * The number picked will try to satisfy the bot's win condition based on the player's tendency.
-   * If the player has picked and equal number of odd and even numbers, pick randomly
+   * If the player has picked and equal number of odd and even numbers, pick randomly.
    *
    * @return the bot's number pick
    */
