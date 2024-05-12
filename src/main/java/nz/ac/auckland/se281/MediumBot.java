@@ -10,6 +10,12 @@ public class MediumBot implements BotDifficulty {
   private BotStrategies strategyTop;
   private int roundCounter;
 
+  /**
+   * Constructor for the medium for class. This is used to intialize strategyRandom and strategyTop
+   * and setting the starting strategy of the bot to strategyRandom.
+   *
+   * @param winCon the condition for the bot
+   */
   public MediumBot(Choice winCon) {
 
     strategyRandom = new RandomStrategy();
